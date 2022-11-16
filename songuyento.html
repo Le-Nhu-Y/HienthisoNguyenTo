@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+
+   function checkSNT(number) {
+       if (number < 2) {
+           return false //tra ve gia tri false
+       }
+       if(number === 2){
+           return true
+       }
+       for (let i = 2; i < number ; i++) {
+           if(number % i === 0){
+               return false
+           }
+       }
+       return true // tat ca truong hop con lai la true
+   }
+   let n=prompt("Nhap so muon in") //nhap so de in ra so lan muon in
+    let count = 0; // dem SNT
+    let i = 2;
+    while (count < n){
+        if(checkSNT(i)){ // check xem so i ( bat dau tu 2 ) co phai la SNT khong
+            count ++ // neu dung thi tang bien count len 1
+            document.write(`SNT thu ${count} la ${i} ` + '<br>') // in ra SNT tu 2
+        }
+        i++
+    }
+
+
+
+
+</script>
+</body>
+</html>
